@@ -8,10 +8,10 @@ import (
 
 func main() {
 	file, err := os.Create("test.json")
-	defer file.Close()
 	if err != nil {
 		fmt.Fprintf(os.Stdout, "create file error: %v\n", err)
 	}
+	defer file.Close()
 
 	type Address struct {
 		ZipCode  string `json:"zip_code"`

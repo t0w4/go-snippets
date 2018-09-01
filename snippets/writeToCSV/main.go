@@ -15,10 +15,10 @@ func main() {
 	}
 
 	file, err := os.Create("test.csv")
-	defer file.Close()
 	if err != nil {
 		fmt.Fprintf(os.Stdout, "create file error: %v\n", err)
 	}
+	defer file.Close()
 	w := csv.NewWriter(file)
 	for _, record := range records {
 		if err := w.Write(record); err != nil {
