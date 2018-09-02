@@ -11,6 +11,7 @@ func main() {
 	conn, err := net.Dial("tcp", "golang.org:80")
 	if err != nil {
 		fmt.Fprintf(os.Stdout, "connect server error: %v\n", err)
+		os.Exit(1)
 	}
 	defer conn.Close()
 	// ex1

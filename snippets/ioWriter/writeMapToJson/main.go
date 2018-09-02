@@ -10,6 +10,7 @@ func main() {
 	file, err := os.Create("test.json")
 	if err != nil {
 		fmt.Fprintf(os.Stdout, "create file error: %v\n", err)
+		os.Exit(1)
 	}
 	defer file.Close()
 
@@ -21,5 +22,6 @@ func main() {
 	e.SetIndent("", "    ")
 	if err := e.Encode(sorce); err != nil {
 		fmt.Fprintf(os.Stdout, "json encode err: %v\n", err)
+		os.Exit(1)
 	}
 }
