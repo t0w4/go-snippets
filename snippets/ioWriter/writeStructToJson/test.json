@@ -1,0 +1,10 @@
+{
+    "name": "taro",
+    "age": 18,
+    "address": {
+        "zip_code": "111-1111",
+        "state": "tokyo",
+        "address_1": "minatoku",
+        "address_2": "odaiba"
+    }
+}
