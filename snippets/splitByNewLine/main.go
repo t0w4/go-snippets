@@ -36,4 +36,24 @@ func main() {
 		fmt.Printf("%#v\n", scanner.Text())
 	}
 
+	// ex3
+	file3, err := os.Open("test3.txt")
+	if err != nil {
+		fmt.Fprintf(os.Stdout, "open file err : %v", err)
+		os.Exit(1)
+	}
+	defer file3.Close()
+	rd := bufio.NewReader(file3)
+	for {
+		line, _, err := rd.ReadLine()
+		if err == io.EOF {
+			break
+		}
+
+		if err != nil {
+			fmt.Fprintf(os.Stdout, "read line err : %v", err)
+			os.Exit(1)
+		}
+		fmt.Printf("%#v\n", string(line))
+	}
 }
