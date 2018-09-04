@@ -33,6 +33,10 @@ func main() {
 	defer file2.Close()
 	scanner := bufio.NewScanner(file2)
 	for scanner.Scan() {
+		if err := scanner.Err(); err != nil {
+			fmt.Fprintf(os.Stdout, "read file err : %v", err)
+			os.Exit(1)
+		}
 		fmt.Printf("%#v\n", scanner.Text())
 	}
 
