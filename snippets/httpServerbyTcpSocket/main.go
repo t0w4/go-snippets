@@ -3,12 +3,14 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"net"
 	"net/http"
 	"net/http/httputil"
 	"os"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -28,30 +30,42 @@ func main() {
 			break
 		}
 		go func() {
+			defer conn.Close()
 			fmt.Printf("Accept %v\n", conn.RemoteAddr())
-			// read request
-			request, err := http.ReadRequest(bufio.NewReader(conn))
-			if err != nil {
-				fmt.Fprintf(os.Stdout, "read request err: %v\n", err)
-				conn.Close()
-				os.Exit(1)
+			for {
+				// set timeout
+				conn.SetDeadline(time.Now().Add(5 * time.Second))
+				// read request
+				request, err := http.ReadRequest(bufio.NewReader(conn))
+				if err != nil {
+					// Timeout or Socket Close Check
+					netErr, ok := err.(net.Error)
+					if ok && netErr.Timeout() {
+						fmt.Println("Timeout")
+						break
+					} else if err == io.EOF {
+						break
+					}
+					fmt.Fprintf(os.Stdout, "read request err: %v\n", err)
+					os.Exit(1)
+				}
+				dump, err := httputil.DumpRequest(request, true)
+				if err != nil {
+					fmt.Fprintf(os.Stdout, "dump request err: %v\n", err)
+					os.Exit(1)
+				}
+				fmt.Println(string(dump))
+				content := "Hello World!"
+				// write response (HTTP/1.1)
+				response := http.Response{
+					StatusCode:    200,
+					ProtoMajor:    1,
+					ProtoMinor:    1,
+					ContentLength: int64(len(content)),
+					Body:          ioutil.NopCloser(strings.NewReader(content)),
+				}
+				response.Write(conn)
 			}
-			dump, err := httputil.DumpRequest(request, true)
-			if err != nil {
-				fmt.Fprintf(os.Stdout, "dump request err: %v\n", err)
-				conn.Close()
-				os.Exit(1)
-			}
-			fmt.Println(string(dump))
-			// write response
-			response := http.Response{
-				StatusCode: 200,
-				ProtoMajor: 1,
-				ProtoMinor: 0,
-				Body:       ioutil.NopCloser(strings.NewReader("Hello World!")),
-			}
-			response.Write(conn)
-			conn.Close()
 		}()
 	}
 }
