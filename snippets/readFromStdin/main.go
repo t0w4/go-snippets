@@ -21,7 +21,7 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		if err := scanner.Err(); err != nil {
-			fmt.Fprintf(os.Stdout, "read file err : %v", err)
+			fmt.Fprintf(os.Stdout, "read file err : %v\n", err)
 			os.Exit(1)
 		}
 		fmt.Printf("%#v\n", scanner.Text())
@@ -36,7 +36,7 @@ func main() {
 		}
 
 		if err != nil {
-			fmt.Fprintf(os.Stdout, "read line err : %v", err)
+			fmt.Fprintf(os.Stdout, "read line err : %v\n", err)
 			os.Exit(1)
 		}
 		fmt.Printf("%#v\n", string(line))

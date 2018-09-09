@@ -12,5 +12,5 @@ func main() {
 		os.Exit(1)
 	}
 	defer file.Close()
-	fmt.Fprintf(file, "name: %s, age: %d, rate; %.2f", "bob", 18, 0.8)
+	fmt.Fprintf(file, "name: %s, age: %d, rate; %.2f\n", "bob", 18, 0.8)
 }

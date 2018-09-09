@@ -14,7 +14,7 @@ func main() {
 	var s string
 	_, err := fmt.Fscan(r, &i, &f, &g, &s)
 	if err != nil {
-		fmt.Fprintf(os.Stdout, "line scan err : %v", err)
+		fmt.Fprintf(os.Stdout, "line scan err : %v\n", err)
 		os.Exit(1)
 	}
 	fmt.Printf("i=%#v, f=%#v, g=%#v, s=%#v\n", i, f, g, s)

@@ -11,7 +11,7 @@ func main() {
 	// ex1
 	file1, err := os.Open("test1.txt")
 	if err != nil {
-		fmt.Fprintf(os.Stdout, "open file err : %v", err)
+		fmt.Fprintf(os.Stdout, "open file err : %v\n", err)
 		os.Exit(1)
 	}
 	defer file1.Close()
@@ -27,14 +27,14 @@ func main() {
 	// ex2
 	file2, err := os.Open("test2.txt")
 	if err != nil {
-		fmt.Fprintf(os.Stdout, "open file err : %v", err)
+		fmt.Fprintf(os.Stdout, "open file err : %v\n", err)
 		os.Exit(1)
 	}
 	defer file2.Close()
 	scanner := bufio.NewScanner(file2)
 	for scanner.Scan() {
 		if err := scanner.Err(); err != nil {
-			fmt.Fprintf(os.Stdout, "read file err : %v", err)
+			fmt.Fprintf(os.Stdout, "read file err : %v\n", err)
 			os.Exit(1)
 		}
 		fmt.Printf("%#v\n", scanner.Text())
@@ -43,7 +43,7 @@ func main() {
 	// ex3
 	file3, err := os.Open("test3.txt")
 	if err != nil {
-		fmt.Fprintf(os.Stdout, "open file err : %v", err)
+		fmt.Fprintf(os.Stdout, "open file err : %v\n", err)
 		os.Exit(1)
 	}
 	defer file3.Close()
@@ -55,7 +55,7 @@ func main() {
 		}
 
 		if err != nil {
-			fmt.Fprintf(os.Stdout, "read line err : %v", err)
+			fmt.Fprintf(os.Stdout, "read line err : %v\n", err)
 			os.Exit(1)
 		}
 		fmt.Printf("%#v\n", string(line))
