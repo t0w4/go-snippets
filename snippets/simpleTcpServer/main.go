@@ -26,8 +26,8 @@ func main() {
 			buffer, err := ioutil.ReadAll(conn)
 			if err != nil {
 				fmt.Fprintf(os.Stdout, "read request err: %v\n", err)
-				os.Exit(1)
 				conn.Close()
+				os.Exit(1)
 			}
 			fmt.Println(string(buffer))
 			conn.Close()
