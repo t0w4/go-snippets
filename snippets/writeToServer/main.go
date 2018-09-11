@@ -21,5 +21,5 @@ func main() {
 	// ex2
 	io.WriteString(conn, "GET / HTTP/1.0\r\n\r\n")
 	io.Copy(os.Stdout, conn)
-
+	os.Exit(0)
 }

@@ -12,4 +12,5 @@ func main() {
 	l3 := bytes.NewBufferString("line3\n")
 	r := io.MultiReader(l1, l2, l3)
 	io.Copy(os.Stdout, r)
+	os.Exit(0)
 }

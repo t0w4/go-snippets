@@ -26,4 +26,5 @@ func main() {
 		fmt.Printf("write file err: %v, byte: %d\n", err, n)
 		os.Exit(1)
 	}
+	os.Exit(0)
 }

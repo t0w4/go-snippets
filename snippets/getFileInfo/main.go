@@ -22,4 +22,5 @@ func main() {
 	fmt.Printf("file mode  : %v", file.Mode().String())
 	fmt.Printf("(%o)\n", file.Mode().Perm())
 	fmt.Printf("directory? : %v\n", file.IsDir())
+	os.Exit(0)
 }

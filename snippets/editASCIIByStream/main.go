@@ -23,4 +23,5 @@ func main() {
 	stream = io.MultiReader(a, s, c, i, &i2)
 
 	io.Copy(os.Stdout, stream)
+	os.Exit(0)
 }

@@ -15,4 +15,5 @@ func main() {
 	defer file.Close()
 	m := io.MultiWriter(file, os.Stdout)
 	fmt.Fprintf(m, "name: %s, age: %d, rate; %.2f\n", "bob", 18, 0.8)
+	os.Exit(0)
 }

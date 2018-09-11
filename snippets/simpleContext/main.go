@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
 	"time"
 )
 
@@ -17,4 +18,5 @@ func main() {
 	}()
 	<-ctx.Done()
 	fmt.Println("all tasks are finished")
+	os.Exit(0)
 }

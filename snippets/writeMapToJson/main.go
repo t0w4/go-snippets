@@ -24,4 +24,5 @@ func main() {
 		fmt.Fprintf(os.Stdout, "json encode err: %v\n", err)
 		os.Exit(1)
 	}
+	os.Exit(0)
 }

@@ -15,4 +15,5 @@ func main() {
 	fmt.Println("waiting SIGNAL")
 	<-signals
 	fmt.Println("catch SIGNAL")
+	os.Exit(0)
 }

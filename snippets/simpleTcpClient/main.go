@@ -16,4 +16,5 @@ func main() {
 
 	message := "Hello World!\n"
 	conn.Write([]byte(message))
+	os.Exit(0)
 }

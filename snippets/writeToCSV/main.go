@@ -33,4 +33,5 @@ func main() {
 		fmt.Fprintln(os.Stdout, err)
 		os.Exit(1)
 	}
+	os.Exit(0)
 }

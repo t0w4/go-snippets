@@ -14,4 +14,5 @@ func main() {
 	}
 	defer file.Close()
 	io.Copy(os.Stdout, file)
+	os.Exit(0)
 }

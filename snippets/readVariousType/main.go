@@ -18,4 +18,5 @@ func main() {
 		os.Exit(1)
 	}
 	fmt.Printf("i=%#v, f=%#v, g=%#v, s=%#v\n", i, f, g, s)
+	os.Exit(0)
 }

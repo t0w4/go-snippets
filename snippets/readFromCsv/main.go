@@ -27,4 +27,5 @@ func main() {
 		}
 		fmt.Println(l[2], l[6:9])
 	}
+	os.Exit(0)
 }

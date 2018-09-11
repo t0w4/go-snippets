@@ -33,4 +33,5 @@ func main() {
 		os.Exit(1)
 	}
 	fmt.Println(string(buffer))
+	os.Exit(0)
 }

@@ -33,4 +33,5 @@ func main() {
 			conn.Close()
 		}()
 	}
+	os.Exit(0)
 }

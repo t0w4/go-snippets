@@ -18,4 +18,5 @@ func main() {
 	writer.Header.Name = "test.txt"
 	io.WriteString(writer, "gzip.Writer test\n")
 	writer.Close()
+	os.Exit(0)
 }

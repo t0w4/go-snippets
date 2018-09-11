@@ -60,4 +60,5 @@ func main() {
 		}
 		fmt.Printf("%#v\n", string(line))
 	}
+	os.Exit(0)
 }

@@ -24,4 +24,5 @@ func main() {
 		fmt.Fprintf(os.Stdout, "copy file err : %v, size: %d\n", err, s)
 		os.Exit(1)
 	}
+	os.Exit(0)
 }

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"time"
 )
 
@@ -15,4 +16,5 @@ func main() {
 	}()
 	<-done
 	fmt.Println("all tasks are finished")
+	os.Exit(0)
 }
