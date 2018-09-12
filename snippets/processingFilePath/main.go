@@ -40,7 +40,7 @@ func main() {
 	// extract file match pattern
 	files, err := filepath.Glob("test.*")
 	if err != nil {
-		fmt.Printf("glob file error: %v", err)
+		fmt.Printf("glob file error: %v\n", err)
 		os.Exit(1)
 	}
 	fmt.Println(files)
