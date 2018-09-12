@@ -36,4 +36,12 @@ func main() {
 
 	// expand env
 	fmt.Printf("go src is in %s\n", os.ExpandEnv("${GOPATH}/src"))
+
+	// extract file match pattern
+	files, err := filepath.Glob("test.*")
+	if err != nil {
+		fmt.Printf("glob file error: %v", err)
+		os.Exit(1)
+	}
+	fmt.Println(files)
 }
