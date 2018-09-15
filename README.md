@@ -11,3 +11,12 @@
 
 [copyFileToStdout](https://github.com/t0w4/go-snippets/blob/master/snippets/copyFileToStdout/main.go)
 - ファイルの内容を標準出力に出す
+
+[createRandomFile](https://github.com/t0w4/go-snippets/blob/master/snippets/createRandomFile/main.go)
+- 1024バイトのランダムな値を持つファイルを作成する
+
+[getAllFilesAtDir](https://github.com/t0w4/go-snippets/blob/master/snippets/getAllFilesAtDir/main.go)
+- カレントディレクトリのファイル、ディレクトリの情報を標準出力に出す
+
+[getFileInfo](https://github.com/t0w4/go-snippets/blob/master/snippets/getFileInfo/main.go)
+- 対象のファイルの情報を標準出力に出す
