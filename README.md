@@ -21,6 +21,8 @@
 [getFileInfo](https://github.com/t0w4/go-snippets/blob/master/snippets/getFileInfo/main.go)
 - 対象のファイルの情報を標準出力に出す
 
-
 [getProcessID](https://github.com/t0w4/go-snippets/blob/master/snippets/getProcessID/main.go)
 - プロセスIDを標準出力に出す
+
+[httpServerbyTcpSocket](https://github.com/t0w4/go-snippets/blob/master/snippets/httpServerbyTcpSocket/main.go)
+- TCPソケットで実装された　HTTPサーバを起動する
