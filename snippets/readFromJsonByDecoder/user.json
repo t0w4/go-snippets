@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "name": "jon brown",
+  "age": 12,
+  "address": {
+    "city": "tokyo",
+    "zip_code": "150-0013"
+  },
+  "comments": [
+    {
+      "id": 2,
+      "content": "Hello!"
+    },
+    {
+      "id": 3,
+      "content": "World!"
+    }
+  ]
+}
