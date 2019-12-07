@@ -6,7 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"gopkg.in/fsnotify.v1"
+	fsnotify "gopkg.in/fsnotify/fsnotify.v1"
 )
 
 func main() {
