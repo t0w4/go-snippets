@@ -26,3 +26,6 @@
 
 [httpServerbyTcpSocket](https://github.com/t0w4/go-snippets/blob/master/snippets/httpServerbyTcpSocket/main.go)
 - TCPソケットで実装された　HTTPサーバを起動する
+
+[nameResolve](https://github.com/t0w4/go-snippets/blob/master/snippets/nameResolve/main.go)
+- 入力されたドメインのipアドレスを標準出力に出す
