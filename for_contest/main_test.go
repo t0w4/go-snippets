@@ -48,3 +48,26 @@ func Test_unique(t *testing.T) {
 		})
 	}
 }
+
+func Test_contain(t *testing.T) {
+	type args struct {
+		a []string
+		s string
+	}
+	tests := []struct {
+		name string
+		args args
+		want bool
+	}{
+		{name: "normal 1", args: args{a: []string{"A", "B", "C"}, s: "A"}, want: true},
+		{name: "normal 2", args: args{a: []string{"A", "B", "C"}, s: "a"}, want: false},
+		{name: "normal 3", args: args{a: []string{"A", "B", "C"}, s: "B"}, want: true},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := contain(tt.args.a, tt.args.s); got != tt.want {
+				t.Errorf("contain() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
