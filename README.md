@@ -36,5 +36,8 @@
 [httpServerbyTcpSocket](https://github.com/t0w4/go-snippets/blob/master/snippets/httpServerbyTcpSocket/main.go)
 - TCPソケットで実装された　HTTPサーバを起動する
 
+[makePngImage](https://github.com/t0w4/go-snippets/blob/master/snippets/makePngImage/main.go)
+- imageパッケージを使って色がついたpng画像を生成する
+
 [nameResolve](https://github.com/t0w4/go-snippets/blob/master/snippets/nameResolve/main.go)
 - 入力されたドメインのipアドレスを標準出力に出す
