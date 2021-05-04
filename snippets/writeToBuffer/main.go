@@ -2,9 +2,8 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 	"os"
-
-	"github.com/golang/go/src/fmt"
 )
 
 func main() {

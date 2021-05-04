@@ -21,6 +21,9 @@
 [drawCircleAlongWindow](https://github.com/t0w4/go-snippets/blob/master/snippets/drawCircleAlongWindow/main.go)
 - terminalのウィンドウに表示できる最大の大きさの四角形を標準出力に出す
 
+[drawGraph](https://github.com/t0w4/go-snippets/blob/master/snippets/drawGraph/main.go)
+- x軸、y軸、原点0と一次関数の直線が描画されたpngファイルを作成する
+
 [editASCIIByStream](https://github.com/t0w4/go-snippets/blob/master/snippets/editASCIIByStream/main.go)
 - ASCII文字列の操作をする
 
