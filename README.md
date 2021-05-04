@@ -21,6 +21,9 @@
 [drawCircleAlongWindow](https://github.com/t0w4/go-snippets/blob/master/snippets/drawCircleAlongWindow/main.go)
 - terminalのウィンドウに表示できる最大の大きさの四角形を標準出力に出す
 
+[editASCIIByStream](https://github.com/t0w4/go-snippets/blob/master/snippets/editASCIIByStream/main.go)
+- ASCII文字列の操作をする
+
 [getAllFilesAtDir](https://github.com/t0w4/go-snippets/blob/master/snippets/getAllFilesAtDir/main.go)
 - カレントディレクトリのファイル、ディレクトリの情報を標準出力に出す
 
