@@ -15,6 +15,12 @@
 [createRandomFile](https://github.com/t0w4/go-snippets/blob/master/snippets/createRandomFile/main.go)
 - 1024バイトのランダムな値を持つファイルを作成する
 
+[detectChangeInWindowSize](https://github.com/t0w4/go-snippets/blob/master/snippets/detectChangeInWindowSize/main.go)
+- terminalのウィンドウサイズの変化を検知し現在の大きさを標準出力に出す
+
+[drawCircleAlongWindow](https://github.com/t0w4/go-snippets/blob/master/snippets/drawCircleAlongWindow/main.go)
+- terminalのウィンドウに表示できる最大の大きさの四角形を標準出力に出す
+
 [getAllFilesAtDir](https://github.com/t0w4/go-snippets/blob/master/snippets/getAllFilesAtDir/main.go)
 - カレントディレクトリのファイル、ディレクトリの情報を標準出力に出す
 
