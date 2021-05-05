@@ -28,7 +28,6 @@ func NewGraph(width, height, padding int) Graph {
 	}
 }
 
-// FillWithWhite imgを白で塗りつぶす
 func (g Graph) GetImg() *image.NRGBA {
 	return g.img
 }
