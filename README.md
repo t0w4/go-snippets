@@ -44,3 +44,6 @@
 
 [nameResolve](https://github.com/t0w4/go-snippets/blob/master/snippets/nameResolve/main.go)
 - 入力されたドメインのipアドレスを標準出力に出す
+
+[plotRandomPoint](https://github.com/t0w4/go-snippets/blob/master/snippets/plotRandomPoint/main.go)
+- ランダムな点がプロットされたpng画像を生成する
